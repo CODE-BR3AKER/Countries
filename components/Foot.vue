@@ -9,6 +9,7 @@
         href="https://www.instagram.com/zarkti_zakaria/"
         target="_blank"
         style="color: green"
+        class="ml-1"
       >
         Zarkti</a
       >

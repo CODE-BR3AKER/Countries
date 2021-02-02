@@ -39,7 +39,7 @@ export default {
 .Padding {
   padding: 2.5rem;
   @media screen and (max-width: "640px") {
-    padding: 0.25rem;
+    padding: 2rem;
     margin-bottom: 1em;
   }
 }

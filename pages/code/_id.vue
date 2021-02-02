@@ -44,8 +44,8 @@
             <template v-for="lang in country.languages"
               >{{ lang.name }}
             </template>
-            <br />
           </p>
+          <br />
           <div>
             <p class="mb-8 sm:mb-2 dark:text-gray-DEFAULT">
               <b> Border countries: </b><br />

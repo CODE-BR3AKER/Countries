@@ -1,4 +1,9 @@
-# debaters
+# Countries around the global
+
+- This project is a concept project to show how to consume a REST api, and deal with multiple redirects in NUXT js.
+- It also has some basic filtering and searching functionalities.
+- Tech used: Nuxt.js, TailwindCSS, Saas.
+- You can preview it at: https://globalmap.netlify.app
 
 ## Build Setup
 
