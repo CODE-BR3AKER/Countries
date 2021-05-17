@@ -1,4 +1,5 @@
-# Countries around the global
+[![Netlify Status](https://api.netlify.com/api/v1/badges/6627feec-0743-4e4a-af72-025550ede66b/deploy-status)](https://app.netlify.com/sites/globalmap/deploys)
+# Countries around the global 🗺️:
 
 - This project is a concept project to show how to consume a REST api, and deal with multiple redirects in NUXT js.
 - It also has some basic filtering and searching functionalities.
