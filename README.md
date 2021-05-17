@@ -1,18 +1,18 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/6627feec-0743-4e4a-af72-025550ede66b/deploy-status)](https://app.netlify.com/sites/globalmap/deploys)
-# 1- Countries around the global 🗺️:
+## 1- Countries around the global 🗺️:
 
 - This project is a concept project to show how to consume a REST api, and deal with multiple redirects in NUXT js.
 - It also has some basic filtering and searching functionalities.
 - Tech used: Nuxt.js, TailwindCSS, Saas.
 - You can preview it at: https://globalmap.netlify.app
 
-# 2- Todo in the future ✔️: :
+## 2- Todo in the future ✔️: :
 
 - [ ] Add Vue-x store 
 - [ ] LazyLoad pictures
 - [ ] Call border countries from the same API endpoints
 
-# 3- Build Setup 🔧 :
+## 3- Build Setup 🔧 :
 
 ```bash
 # install dependencies
