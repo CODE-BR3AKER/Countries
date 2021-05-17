@@ -6,7 +6,7 @@
 - Tech used: Nuxt.js, TailwindCSS, Saas.
 - You can preview it at: https://globalmap.netlify.app
 
-## 2- Todo in the future ✔️: :
+## 2- Todo in the future ✔️ :
 
 - [ ] Add Vue-x store 
 - [ ] LazyLoad pictures
