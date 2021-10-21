@@ -43,6 +43,7 @@ export default {
   // Modules (https://go.nuxtjs.dev/config-modules)
   modules: [
     // https://go.nuxtjs.dev/bootstrap
+    "nuxt-webfontloader",
     "@nuxtjs/axios"
   ],
   tailwindcss: {
@@ -51,6 +52,11 @@ export default {
   },
   purgeCSS: {
     whitelist: ["dark-mode"]
+  },
+  webfontloader: {
+    google: {
+      families: ['Nunito+Sans'] //Loads Lato font with weights 400 and 700
+    }
   },
   axios: {
     https: true,

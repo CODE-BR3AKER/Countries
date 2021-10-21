@@ -6,7 +6,6 @@
   </div>
 </template>
 <style>
-@import url(https://fonts.google.com/specimen/Nunito+Sans);
 html,
 body {
   height: 100%;
