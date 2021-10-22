@@ -60,9 +60,9 @@ export default {
   },
   axios: {
     https: true,
-    baseURL: "http://localhost:4000"
+    // baseURL: ""
   },
-  publicRuntimeConfig: {
+  /*publicRuntimeConfig: {
     axios: {
       browserBaseURL: process.env.BROWSER_BASE_URL
     }
@@ -72,7 +72,7 @@ export default {
     axios: {
       baseURL: process.env.BASE_URL
     }
-  },
+  },*/
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {}
 };

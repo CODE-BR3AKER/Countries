@@ -16,7 +16,7 @@
       </div>
       <select
         @change="clickFilter($event)"
-        class="w-40 h-12 pl-2 dark:bg-blue-DEFAULT dark:text-gray-DEFAULT bg-gray-DEFAULT shadow"
+        class="w-40 h-12 px-4 dark:bg-blue-DEFAULT dark:text-gray-DEFAULT bg-gray-DEFAULT shadow"
       >
         <option value="">Filter by region</option>
         <option value="africa">Africa</option>
@@ -30,14 +30,14 @@
       <Card
         v-for="country in filteredCountries"
         :key="country.numericCode"
-        :title="country.name"
+        :title="country.name.common"
         :population="country.population"
         :region="country.region"
         :capital="country.capital"
-        :where="'/name/' + country.name"
+        :where="'/name/' + country.name.common"
       >
         <template v-slot:picture>
-          <img :src="country.flag" class="flag" />
+          <img :src="country.flags.svg" class="block h-56 md:h-40 w-full object-cover" />
         </template>
       </Card>
     </div>
@@ -46,7 +46,7 @@
 <script>
 export default {
   async asyncData({ $axios }) {
-    const countries = await $axios.$get("https://restcountries.eu/rest/v2/all");
+    const countries = await $axios.$get("https://restcountries.com/v3.1/all");
     return {
       countries,
     };
@@ -61,7 +61,7 @@ export default {
     filteredCountries: function () {
       return this.countries.filter((country) => {
         return (
-          country.name.toUpperCase().match(this.search.toUpperCase()) &&
+          country.name.common.toUpperCase().match(this.search.toUpperCase()) &&
           country.region.toUpperCase().match(this.selected.toUpperCase())
         );
       });
@@ -74,11 +74,3 @@ export default {
   },
 };
 </script>
-<style lang="scss" scoped>
-.flag {
-  display: block;
-  height: 150px;
-  width: 400px;
-  object-fit: cover;
-}
-</style>

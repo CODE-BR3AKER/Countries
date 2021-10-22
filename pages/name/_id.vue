@@ -4,24 +4,24 @@
   >
     <nuxt-link
       to="/"
-      class="text-blue-light dark:text-gray-DEFAULT flex border justify-center items-center m-10 pl-2 pr-4 pt-2 pb-2 rounded w-32"
+      class="text-blue-light dark:text-gray-DEFAULT flex border justify-center items-center m-10 ml-10 md:ml-40 pl-2 pr-4 pt-2 pb-2 rounded w-32"
     >
       &larr; Back</nuxt-link
     >
     <div
       class="flex mt-12 flex-wrap justify-start sm:justify-center items-start"
     >
-      <img :src="country[0].flag" class="w-3/4 sm:w-1/4 sm:pl-0 pl-10" />
+      <img :src="country[0].flags.svg" class="w-3/4 sm:w-1/4 sm:pl-0 pl-10" />
       <div class="w-full sm:w-2/4 sm:pl-20 pl-10">
         <h1
           class="sm:text-2xl text-xl sm:w-1/2 w-full font-bold mt-10 sm:mt-0 dark:text-gray-DEFAULT"
         >
-          {{ country[0].name }}
+          {{ country[0].name.common }}
         </h1>
         <div class="flex flex-wrap w-2/2">
           <p class="sm:w-1/2 w-2/2 dark:text-gray-DEFAULT">
             <b>Native Name:</b>
-            {{ country[0].nativeName }} <br />
+            {{ country[0].name.official }} <br />
             <b>Population:</b> {{ country[0].population }}
             <br />
             <b>Region:</b> {{ country[0].region }} <br />
@@ -31,18 +31,18 @@
           </p>
           <p class="sm:w-1/2 sm:pl-4 w-2/2 dark:text-gray-DEFAULT">
             <b>Top Level Domain:</b>
-            <template v-for="domain in country[0].topLevelDomain"
+            <template v-for="domain in country[0].tld"
               >{{ domain }}
             </template>
             <br />
             <b>Currencies:</b>
             <template v-for="currency in country[0].currencies"
-              >{{ currency.code }}
+              >{{ currency.name }}
             </template>
             <br />
             <b>Languages:</b>
             <template v-for="lang in country[0].languages"
-              >{{ lang.name }}
+              >{{ lang }} -
             </template>
           </p>
           <br />
@@ -68,7 +68,7 @@
 export default {
   async asyncData({ params, $axios }) {
     const country = await $axios.$get(
-      `https://restcountries.eu/rest/v2/name/${params.id}`
+      `https://restcountries.com/v3.1/name/${params.id}`
     );
     return {
       country,

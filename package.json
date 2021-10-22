@@ -1,5 +1,5 @@
 {
-  "name": "debaters",
+  "name": "countries",
   "version": "1.0.0",
   "private": true,
   "scripts": {
@@ -11,16 +11,13 @@
   "dependencies": {
     "core-js": "^3.6.5",
     "nuxt": "^2.14.6",
-    "nuxt-webfontloader": "^1.1.0",
-    "v-owl-carousel": "^1.0.8"
+    "nuxt-webfontloader": "^1.1.0"
   },
   "devDependencies": {
     "@nuxtjs/axios": "^5.12.5",
     "@nuxtjs/color-mode": "^2.0.3",
     "@nuxtjs/tailwindcss": "^3.4.2",
     "fibers": "^5.0.0",
-    "sass": "^1.29.0",
-    "sass-loader": "^10.1.0",
     "tailwindcss-dark-mode": "^1.1.7"
   }
 }
